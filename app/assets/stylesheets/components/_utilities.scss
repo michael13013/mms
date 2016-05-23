@@ -1,0 +1,92 @@
+/* -------------------------------------
+ * Utilities classes
+ * These are examples of utilities classes
+ * Feel free to change them and create your own
+ * ------------------------------------- */
+
+// Paddings
+.padded {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.padded h3 {
+  margin-bottom: 1.5em;
+}
+
+.margin-sm {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.padded-newsletter{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padded-basket {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 21px 0px 20px -300px;
+}
+
+.padded-product {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+// Backgrounds
+.bg-black {
+  background: #4a4a4a;
+}
+.bg-grey {
+  background: #aeaeae;
+}
+.bg-blue {
+  background: #00a3e1;
+}
+.bg-dark-blue {
+  background: #3b5998;
+}
+
+.vertical-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.card-size{
+  background-color: $gray-lighter;
+  border: 1px solid $gray;
+  padding: 5px;
+  margin: 3px;
+  color: $gray;
+}
+
+.border-gray{
+  border: 1px solid $gray-lighter;
+}
+
+.hide{
+  display: none;
+}
+
+.full{
+  width: 100%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.number{
+  color: $red;
+  font-decoration: bold;
+}

@@ -1,0 +1,10 @@
+.looks-cta {
+  font-size: 18px;
+  line-height: 50px;
+  margin-top: 2em;
+  outline: none !important;
+  &:focus, &:active {
+    outline: none !important;
+    color: white;
+  }
+}

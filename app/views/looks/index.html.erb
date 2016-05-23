@@ -1,0 +1,57 @@
+<div class="padded">
+  <%= form_tag products_path, method: :get do %>
+      <h3 class="text-center">
+        Laissez-vous guider parmi nos <span class="number"><%= Product.count %></span> références en sélectionnant un ou plusieurs looks
+      </h3>
+
+      <div class="container">
+        <div class="row">
+          <% Look.all.each do |look| %>
+              <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="card-look" >
+                  <div class="card-name"><%= look.name %> </div>
+                  <div class="card-filter" style="background-image: url('<%= image_path look.photo %>') ">
+                  </div>
+                  <div class="card-hover hide">
+                    <!--     <p>Je suis une super look qui déchire </p> -->
+                    <p><span><%= look.description %></span></p>
+                  </div>
+                  <div class="card-check <%= 'hide' unless @looks_selected.include?(look.id.to_s) %>">
+                    <i class="fa fa-check"></i>
+                  </div>
+                  <input type="hidden" name="looks[<%= look.id.to_s %>]" value="<%= @looks_selected.include?(look.id.to_s) ? '1' : '0' %>">
+                </div>
+              </div>
+          <%end %>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <input type="submit" value="Je découvre" class="btn navbar-wagon-button looks-cta">
+      </div>
+
+  <% end %>
+
+</div>
+
+
+<% content_for :after_js do %>
+    <script>
+      $(function(){
+        $('.card-look').click(function() {
+          $(this).children(".card-check").toggleClass('hide');
+          var el = $(this).children('input[type=hidden]');
+          el.val(el.val() == 0 ? 1 : 0);
+        });
+
+        $(".card-look").on("mouseover", function() {
+          $(this).children(".card-hover").removeClass('hide');
+        })
+
+        $(".card-look").on("mouseout", function() {
+          $(this).children(".card-hover").addClass('hide');
+        })
+
+      });
+    </script>
+<% end %>

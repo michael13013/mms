@@ -1,0 +1,20 @@
+.left-bar{
+  width: 200px;
+  top: 0;
+  bottom:0;
+  position: absolute;
+  background-color: $gray-lighter;
+  border: 1px solid black;
+  border-radius: 2px;
+  color: black;
+}
+
+// .title-sidebar{
+//   text-decoration: none !important;
+//   color: black;
+// }
+
+.wrapper-sidebar{
+  position: relative;
+}
+

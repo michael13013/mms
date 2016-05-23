@@ -1,0 +1,104 @@
+/* -------------------------------------
+ * CSS code specific to home page
+ * (margin/padding adjustments)
+ * ------------------------------------- */
+
+.feature {
+  margin: 50px auto;
+  margin-bottom: 225px;
+  padding-top: 27px;
+  font-size: 75px;
+  color: grey;
+  font-weight: lighter;
+  height: 160px;
+  text-align: center;
+  vertical-align: middle;
+      transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+}
+
+.feature h2 {
+  font-weight: lighter;
+  margin-top: 0;
+  font-size: 18px;
+}
+
+// .feature:hover {
+//   opacity: 1.0;
+//   border: black 1px solid;
+//   background-color: #F6F7F8;
+// }
+
+.feature p {
+  font-size: 20px;
+  margin: 50px auto;
+}
+
+.image-chiffre {
+  width: 150px;
+  margin-bottom: 18px;
+}
+
+.record {
+  margin: 15px auto;
+}
+
+.wrapper-temoignage p {
+  font-weight: lighter;
+}
+
+.carousel-inner {
+  height: 350px;
+}
+
+.carousel-caption {
+  top: 150px;
+}
+
+.wrapper-form {
+  margin: 50px auto;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.search-box {
+  padding-left: 6px;
+}
+
+.btn-search {
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.reseaux {
+  color: black;
+  flex: 0 0 24%;
+  font-size: 30px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+
+transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.wrapper-contact p {
+  color: grey;
+}
+
+.change {
+  color: #D23333;
+}

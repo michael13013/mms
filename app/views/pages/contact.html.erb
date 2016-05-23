@@ -1,0 +1,15 @@
+<div class="wrapper-form">
+  <div class="text-center">
+    <h3><strong>CONTACTEZ-NOUS</strong></h3>
+    <p>Une question ? Envoyez nous un message. Réponse garantie sous 24 heures.</p>
+  </div>
+<div class="container text-center">
+  <%= simple_form_for @contact do |f| %>
+    <%= f.input :name, placeholder: "Votre Nom", label: false %>
+    <%= f.input :email, placeholder: "Votre Email", label: false %>
+    <%= f.input :subject, placeholder: "L'objet de votre Message", label: false %>
+    <%= f.input :message, placeholder: "Votre Message", label: false, :input_html => {:rows => 5} %>
+    <%= f.button :submit, "Envoyez votre message", class: "btn navbar-wagon-button cta btn-lg margin-sm" %>
+  <% end %>
+</div>
+</div>

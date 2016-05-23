@@ -1,0 +1,63 @@
+.banner {
+  height: calc(100vh - 70px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  // position: relative;
+}
+
+.banner-parallax{
+    background-attachment: fixed;
+    height: 250px;
+    padding: 200px;
+}
+
+.banner-content {
+  font-weight: lighter;
+
+  .tagline {
+    font-size: 22px;
+  }
+
+  .cta {
+    font-size: 18px;
+    line-height: 50px;
+  }
+}
+
+.banner-home{
+  background-image: image-url("image-banner.jpeg")
+}
+
+.banner-parallax1 {
+  background-image: image-url("image-parallax.jpg")
+}
+
+.banner-parallax2 {
+  background-image: image-url("image3-parallax.jpg")
+}
+
+.banner-filter {
+  color: white;
+  position: absolute;
+  font-weight: lighter;
+  background-color: rgba(30,30,30,0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.banner-content{
+  color: white;
+  position: relative;
+  z-index: 8;
+}
+
+

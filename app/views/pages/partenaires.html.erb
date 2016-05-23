@@ -1,0 +1,14 @@
+<div class="container text-center">
+  <h1>Devenez partenaire de Monsieur Mode Shop !</h1>
+  <h2>Augmentez le trafic et les ventes de votre site<br>en partageant vos produits<br>sur www.monsieur-mode-shop.com</h2>
+  <h3>Je laisse mon message :</h3>
+    <div class="container text-center">
+    <%= simple_form_for @contact do |f| %>
+      <%= f.input :name, placeholder: "Votre Nom", label: false %>
+      <%= f.input :email, placeholder: "Votre Email", label: false %>
+      <%= f.input :subject, placeholder: "L'objet de votre Message", label: false %>
+      <%= f.input :message, placeholder: "Votre Message", label: false, :input_html => {:rows => 5} %>
+      <%= f.button :submit, "Envoyez votre message", class: "btn navbar-wagon-button cta btn-lg margin-sm" %>
+    <% end %>
+  </div>
+</div>

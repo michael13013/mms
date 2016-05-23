@@ -1,0 +1,21 @@
+<div class="padded">
+  <%= link_to " Retour", products_path, :class => "btn btn-danger text-right" %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div class="border-gray text-center ">
+            <%= image_tag @product.image, class: "full" %>
+        </div>
+      </div>
+        <div class="col-xs-12 col-md-6">
+            <h2><%= @product.title %></h2>
+            <p><%= @product.description %></p>
+            <% @product.offers.each do |offer|%>
+            <p>Prix : <%= offer.price %>€</p>
+            <p>Tailles disponibles : <%= offer.size %> </p>
+            <% end %>
+            <%= link_to "VOIR L'OFFRE CHEZ LE PARTENAIRE", @product.best_offer.link, target: "blank", :class => "btn btn-danger" %>
+        </div>
+    </div>
+  </div>
+</div>

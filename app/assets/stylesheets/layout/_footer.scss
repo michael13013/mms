@@ -1,0 +1,93 @@
+// Your footer style
+.footer {
+background: $gray-darker;
+padding: 50px;
+
+  h3{
+    color: white;
+  }
+
+  a{
+    color: white;
+  }
+
+  ul{
+    padding: 0;
+  }
+
+}
+
+#p-footer{
+  padding: 10px;
+  margin: 0;
+  color: white;
+}
+
+#mm-footer{
+  padding: 10px;
+  margin: 0;
+  color: white;
+}
+  a{
+    color: white;
+  }
+
+.share-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  margin: auto;
+}
+
+.share-link {
+  flex: 0 0 24%;
+  color: white;
+  font-size: 25px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+
+transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+
+  &:hover {
+    .fa-facebook {
+    color: #3B5998;
+}
+    .fa-twitter {
+    color: #5EA9DD;
+}
+    .fa-pinterest {
+    color: #CB2027;
+}
+    .fa-linkedin {
+    color: #006498;
+}
+  }
+}
+
+.bg-text {
+  background: #4a4a4a;
+}
+.bg-email {
+  background: #aeaeae;
+}
+.bg-twitter {
+  background: #00a3e1;
+}
+.bg-facebook {
+  background: #3b5998;
+}
+
+.mentions-legales {
+  background: $gray-darker;
+}
+
+.menu-footer-container {
+  background: $gray-darker;
+}

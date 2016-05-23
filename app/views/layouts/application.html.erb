@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="google-site-verification" content="CzvtPAEsy_8O3Kbtikm0FYW3Y3vgQofzmd_AhdDgKIY" />
+    <title>Monsieur Mode Shop - Boutique Vetements Homme</title>
+    <%= csrf_meta_tags %>
+    <meta name="description" itemprop="description" content="Toute la mode homme réunie dans une seule boutique ! Vêtements, chaussures, accessoires de mode masculine."/>
+    <meta name="keywords" itemprop="keywords" content="mode homme, mode masculine, magasin masculin, magasin homme, relooking homme, style homme, look homme, vêtements homme, mode au masculin, conseils mode masculine"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link rel="icon" href="<%= image_path 'favicon.png' %>" type="image/png" />
+  </head>
+  <body class="<%= controller_name + ' ' + action_name %>">
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
+    <%= yield %>
+    <%=  render 'shared/footer' %>
+    <%= javascript_include_tag 'application' %>
+    <%= yield :after_js %>
+  </body>
+</html>
