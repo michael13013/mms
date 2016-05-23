@@ -1,5 +1,7 @@
 Rails.application.configure do
 
+  config.action_mailer.delivery_method = :smtp
+
   # Mail settings through Gmail
   config.action_mailer.asset_host = ENV['CANONICAL_URL']
   config.action_mailer.smtp_settings = {
