@@ -13,8 +13,8 @@ class ContactMailer < ApplicationMailer
     @message = contact.message
     mail(
       to:       "contact@monsieur-mode-shop.com",
-      from: @email,
-      subject:  @subject
+      from: "contact@monsieur-mode-shop.com",
+      subject:  "#{@email} - #{@subject}"
     )
   end
 
