@@ -21,9 +21,14 @@
 }
 
 .feature h2 {
-  font-weight: lighter;
+  font-weight: 700;
   margin-top: 0;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.feature img{
+  width: 128px;
+  height: 128px;
 }
 
 // .feature:hover {
@@ -34,7 +39,7 @@
 
 .feature p {
   font-size: 20px;
-  margin: 50px auto;
+  margin-top: 50px;
 }
 
 .image-chiffre {

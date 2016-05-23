@@ -1,7 +1,8 @@
 // Your footer style
 .footer {
 background: $gray-darker;
-padding: 50px;
+padding-top: 50px;
+padding-bottom: 5px;
 
   h3{
     color: white;
@@ -28,9 +29,10 @@ padding: 50px;
   margin: 0;
   color: white;
 }
-  a{
-    color: white;
-  }
+
+.footer.a{
+  color: white;
+}
 
 .share-links {
   display: flex;
@@ -90,4 +92,8 @@ transition: all 0.3s ease-in-out 0s;
 
 .menu-footer-container {
   background: $gray-darker;
+}
+
+.mentions-legales{
+  padding-top: 30px;
 }

@@ -44,19 +44,25 @@
   </div>
 </div>
 
-<div class="wrapper-features padded">
+<div class="wrapper-features">
   <div class="features text-center">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-          <%= image_tag "feature1.png", class: "image-chiffre"%>
-          <p class="text-center">Trouvez vos articles préférés parmi</p>
-          <h2 class="text-center"><%= Product.count %> références</h2>
+          <div class="feature">
+             <%= image_tag "feature1.png"%>
+            <p class="text-center">Trouvez vos articles préférés parmi</p>
+            <h2 class="text-center"> <strong> <%= Product.count %> </strong> références</h2>
+          </div>
+
         </div>
         <div class="col-xs-12 col-sm-6">
-          <%= image_tag "partner-feature.png", class: "image-chiffre"%>
-          <p class="text-center">Nous travaillons actuellement avec</p>
-          <h2 class="text-center"><%= Feed.count %> partenaires</h2>
+          <div class="feature">
+            <%= image_tag "partner-feature.png" %>
+            <p class="text-center">Nous travaillons actuellement avec</p>
+            <h2 class="text-center"> <strong> <%= Feed.count %></strong> partenaires</h2>
+          </div>
+
         </div>
       </div>
     </div>
