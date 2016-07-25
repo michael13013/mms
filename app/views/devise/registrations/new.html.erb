@@ -4,12 +4,12 @@
       <div class="wrapper-registration">
       <h2>Nouveau ?<br>Créez votre compte !</h2>
       <p>Gardez une trace de vos coups de coeur et partagez-les !</p>
-      <p>Et profitez de conseils personnalisés !</p>
+      <p>Et profitez de conseils sur mesure pour vous guider dans vos choix !</p>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
         <div class="form-inputs">
           <%= f.input :email, required: true, autofocus: true, placeholder: "Votre Email",label: false %>
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "Votre mot de passe", label: false%>
+          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} caractères au minimum" if @minimum_password_length), placeholder: "Votre mot de passe", label: false%>
           <%= f.input :password_confirmation, required: true, placeholder: "Confirmez votre mot de passe", label: false %>
         </div>
         <div class="form-actions">
