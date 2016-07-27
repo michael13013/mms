@@ -21,4 +21,7 @@ class PagesController < ApplicationController
   def mentionslegales
   end
 
+  def recrutement
+  end
+
 end
