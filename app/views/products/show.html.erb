@@ -8,7 +8,7 @@
       </div>
         <div class="col-xs-12 col-md-6">
             <h2><%= @product.title %></h2>
-            <p><%= @product.description %></p>
+            <p class="text-justify"><%= @product.description %></p>
             <% @product.offers.each do |offer|%>
             <p><u>Prix Soldé</u> : <%= offer.price %>€</p>
             <p><u>Tailles disponibles</u> : <%= offer.size %> </p>
