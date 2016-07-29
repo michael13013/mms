@@ -10,11 +10,15 @@
             <h2><%= @product.title %></h2>
             <p><%= @product.description %></p>
             <% @product.offers.each do |offer|%>
-            <p>Prix : <%= offer.price %>€</p>
-            <p>Les Tailles disponibles : <%= offer.size %> </p>
+            <p><u>Prix Soldé</u> : <%= offer.price %>€</p>
+            <p><u>Tailles disponibles</u> : <%= offer.size %> </p>
+            <p><u>Livraison et retour</u> :</p>
+            <p>- Livraison sous 3 jours ouvrés</p>
+            <p>- Retour gratuit sous 14 jours</p>
             <% end %>
             <%= link_to "VOIR L'OFFRE CHEZ LE PARTENAIRE", @product.best_offer.link, target: "blank", :class => "btn navbar-wagon-button cta btn-lg margin-smr" %><br>
             <%= link_to "DECOUVRIR D'AUTRES ARTICLES", products_path, :class => "btn navbar-wagon-button cta btn-lg margin-sm" %>
+            <%= link_to "CONTACTEZ-NOUS !", contact_path, :class => "btn navbar-wagon-button cta btn-lg margin-sm" %>
         </div>
     </div>
   </div>
