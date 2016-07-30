@@ -3,23 +3,48 @@
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <div class="border-gray text-center ">
-            <%= image_tag @product.image, class: "full60" %>
+          <%= image_tag @product.image, class: "full60" %>
         </div>
       </div>
         <div class="col-xs-12 col-md-6">
-            <h2><%= @product.title %></h2>
-            <p class="text-justify"><%= @product.description %></p>
-            <% @product.offers.each do |offer|%>
-            <p><u>Prix Soldé</u> : <%= offer.price %>€</p>
-            <p><u>Tailles disponibles</u> : <%= offer.size %> </p>
-            <p><u>Livraison et retour</u> :</p>
-            <p>- Livraison sous 3 jours ouvrés</p>
-            <p>- Retour gratuit sous 14 jours</p>
-            <% end %>
-            <%= link_to "VOIR L'OFFRE CHEZ LE PARTENAIRE", @product.best_offer.link, target: "blank", :class => "btn navbar-wagon-button cta btn-lg margin-smr" %><br>
-            <%= link_to "DECOUVRIR D'AUTRES ARTICLES", products_path, :class => "btn navbar-wagon-button cta btn-lg margin-sm" %>
-            <%= link_to "CONTACTEZ-NOUS !", contact_path, :class => "btn navbar-wagon-button cta btn-lg margin-sm" %>
+          <h2><%= @product.title %></h2>
+          <p class="text-justify"><%= @product.description %></p>
+          <% @product.offers.each do |offer|%>
+          <p><u>Prix Soldé</u> : <%= offer.price %>€</p>
+          <p><u>Tailles disponibles</u> : <%= offer.size %> </p>
+          <p><u>Livraison et retour</u> : Voir conditions</p>
+          <% end %>
+          <p class="text-center" >
+          <%= link_to "VOIR LES DETAILS DE L'OFFRE CHEZ LE PAERTENAIRE", @product.best_offer.link, target: "blank", :class => "btn navbar-wagon-button cta btn-lg margin-smr" %></p><br>
         </div>
     </div>
   </div>
-</div>
+  <div class="wrapper-feature text-center">
+  <div class="container">
+    <div class="row">
+    <h2>Ce produit vous plaît ?</h2>
+      <div class="col-xs-12 col-sm-4">
+        <div class="feature">
+          <%= image_tag "button_ok.png", class: "text-center"%>
+          <div><p>1. Cliquez sur le bouton ci-dessous pour découvrir tous les détails.</p></div>
+           <%= link_to "VOIR L'OFFRE CHEZ LE PARTENAIRE", @product.best_offer.link, target: "blank", :class => "btn navbar-wagon-button cta btn-lg margin-smr" %><br>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="feature">
+          <%= image_tag "White-Shirt.png", class: "text-center"%>
+          <div><p>2. Découvrez d'autres articles similaires ou complétez votre tenue</p></div>
+          <%= link_to "DECOUVRIR D'AUTRES ARTICLES", products_path, :class => "btn navbar-wagon-button cta btn-lg margin-sm" %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="feature">
+          <%= image_tag "question.png", class: "text-center"%>
+          <div><p>3. Une question ? Besoin d'une information complémentaire ?</p></div>
+          <%= link_to "CONTACTEZ-NOUS !", contact_path, :class => "btn navbar-wagon-button cta btn-lg margin-sm" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
