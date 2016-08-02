@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>Oups ! Désolé !! Erreur 404</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
@@ -58,10 +58,14 @@
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+      <h1>Oups ! Désolé mais la page que vous recherchez n'existe plus... (Erreur 404)</h1>
+      <p>Peut être avez vous mal tapé l'url ou que la page a changé récemment...</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>Rien de grave mais désolé pour cette petite erreur, promis, on y travaille !</p>
   </div>
+  <p>Cliquez sur le logo pour revenir à la page d'accueil de Monsieur Mode Shop !</p><br>
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "logo-monsieur-mode-shop.jpg" %>
+  <% end %>
 </body>
 </html>
