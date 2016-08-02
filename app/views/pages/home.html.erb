@@ -43,23 +43,23 @@
   </div>
 </div>
 
-<div class="wrapper-features">
+<div class="wrapper-features padded">
   <div class="features text-center">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6">
           <div class="feature">
              <%= image_tag "feature1.png"%>
-            <p class="text-center">Trouvez vos articles préférés parmi</p>
-            <h2 class="text-center"> <strong> <%= Product.count %> </strong> références</h2>
+            <p class="text-center">Trouvez vos articles préférés parmi un choix de </p>
+            <h2 class="text-center"> <strong> <%= Product.count %> </strong> références de mode homme<br>(vêtements, chaussures & accessoires).</h2><p><%= link_to "Voir tous les produits", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
           </div>
 
         </div>
         <div class="col-xs-12 col-sm-6">
           <div class="feature">
             <%= image_tag "partner-feature.png" %>
-            <p class="text-center">Nous travaillons actuellement avec</p>
-            <h2 class="text-center"> <strong> <%= Feed.count %></strong> partenaires</h2>
+            <p class="text-center">Nous vous proposons actuellement le<br></p>
+            <h2 class="text-center"> <strong> catalogue de <%= Feed.count %></strong> marques et distributeurs<br> sélectionnés pour leur sérieux.</h2><p><%= link_to "Devenir partenaire", partenaires_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
           </div>
 
         </div>
@@ -179,7 +179,7 @@
 
 <div class="wrapper-form">
   <div class="text-center">
-    <p>Une question ? Envoyez nous un message. Réponse garantie sous 24 heures.</p>
+    <p>Une question sur le fonctionnement du site ? Vous recherchez un produit en particulier ? Envoyez nous un message. Réponse garantie sous 24 heures.</p>
   </div>
 <div class="container text-center">
   <%= simple_form_for @contact do |f| %>
@@ -196,7 +196,7 @@
   <div class="container">
   <p>Monsieur-Mode-Shop.com : Votre boutique 100% Mode Homme en ligne !!<br>
   Monsieur-Mode-Shop.com déniche pour vous, le meilleur des tendances de la mode pour homme.<br>
-  Une expertise unique qui répond à toutes les attentes à travers une large sélection : Prêt-à-porter, Chaussures, Accessoires parmi des milliers de références !<br>
+  Une expertise unique qui répond à toutes vos attentes à travers une large sélection : Prêt-à-porter, Chaussures et Accessoires parmi des milliers de références !<br>
   <strong>Du 22 juin au 2 août 2016 sur Monsieur-Mode-Shop.com, profitez des Soldes d'été 2016 sur des milliers d'articles de mode masculine.</strong></p>
   </div>
 </div>
