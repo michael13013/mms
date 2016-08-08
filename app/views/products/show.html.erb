@@ -10,7 +10,7 @@
           <h2><%= @product.title %></h2>
           <p class="text-justify"><%= @product.description %></p>
           <% @product.offers.each do |offer|%>
-          <p><u>Prix Soldé</u> : <%= offer.price %>€</p>
+          <p><u>Prix</u> : <%= offer.price %>€</p>
           <p><u>Tailles disponibles</u> : <%= offer.size %> </p>
           <p><u>Livraison et retour</u> : Voir conditions</p>
           <% end %><br>
