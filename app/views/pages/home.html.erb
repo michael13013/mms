@@ -59,7 +59,7 @@
           <div class="feature">
             <%= image_tag "partner-feature.png" %>
             <p class="text-center">Nous vous proposons actuellement le<br></p>
-            <h2 class="text-center"> <strong> catalogue de <%= Feed.count %></strong> marques et distributeurs<br> sélectionnés pour leur sérieux.</h2><p><%= link_to "Devenir partenaire", partenaires_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
+            <h2 class="text-center"> <strong> catalogue de <%= Feed.count %></strong> marques et distributeurs<br> sélectionnés pour leur choix et leur sérieux.</h2><p><%= link_to "Devenir partenaire", partenaires_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
           </div>
 
         </div>
@@ -78,13 +78,6 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-      <div class="item">
-        <%= image_tag "costume-mariage-homme.png"%>
-       <div class="carousel-caption">
-        <h2>C'est parti pour la saison des mariages !</h2>
-        <p><%= link_to "Voir tous les costumes", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
-        </div>
-      </div>
     <div class="item active">
       <%= image_tag "costume-homme.jpg"%>
       <div class="carousel-caption">
@@ -120,7 +113,7 @@
           <%= image_tag "visage2.jpg", class: "avatar-bordered-large"%>
           <em>Sylvie de Lyon</em>
         </div>
-        <p>"Ce site me fait gagner un temps fou ! Mon mari fait du 3XL. Avant, je consultais des dizaines de boutiques et je ne trouvais pas grand chose. Aujourd'hui, je trouve tout avec Monsieur Mode ! Merci et bonne continuation à votre équipe !"</p>
+        <p>" Ce site me fait gagner un temps fou ! Mon mari fait du 4XL. Avant, je consultais des dizaines de boutiques et je ne trouvais pas grand chose. Aujourd'hui, je trouve tout avec Monsieur Mode ! Merci et bonne continuation à votre équipe ! "</p>
 
       </div>
       <div class="col-xs-12 col-sm-4">
@@ -128,14 +121,14 @@
           <%= image_tag "michael-turcan.jpg", class: "avatar-bordered-large"%>
           <em>Michaël de Marseille</em>
         </div>
-        <p>"Top !! Je peux faire des recherches par look mais je peux aussi voir tous les produits disponibles sur la boutique et faire moi même mes tris pour trouver l'article idéal ! C'est vraiment super pratique !"</p>
+        <p>" Top !! Je peux faire des recherches par look mais je peux aussi voir tous les produits disponibles sur la boutique et faire moi même mes tris pour trouver l'article idéal ! C'est vraiment super pratique ! "</p>
       </div>
       <div class="col-xs-12 col-sm-4">
         <div class="record">
           <%= image_tag "visage1.jpg", class: "avatar-bordered-large"%>
           <em>Rebecca de Paris</em>
         </div>
-        <p>"Bonjour, d'habitude je n'achète que sur Amazon. Je connaissais des moteurs de recherche tels que Google Shopping ou Shopalike, mais là, la navigation est simple, efficace et le choix est complètement dingue ! Merci !!"</p>
+        <p>" Bonjour, d'habitude je n'achète que sur Amazon. Je connaissais des moteurs de recherche tels que Google Shopping ou Shopalike, mais là, la navigation est simple, efficace et le choix est complètement dingue ! Merci à vous ! "</p>
       </div>
     </div>
       <div class="container text-center">
@@ -150,7 +143,7 @@
   <div class="section-content">
     <div class="newsletter text-center">
      <h2>RESTONS EN CONTACT !</h2>
-     <p>Inscrivez-vous à la newsletter pour être tenu informé des dernières actualités</p>
+     <p>Inscrivez-vous à la newsletter pour être tenu informé des dernières actualités et de tous nos bons plans !</p>
      <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -198,6 +191,7 @@
   Monsieur-Mode-Shop.com déniche pour vous, le meilleur des tendances de la mode pour homme.<br>
   Notre expertise unique répond à toutes vos attentes à travers une large sélection : Prêt-à-porter, Chaussures et Accessoires parmi des milliers de références !<br>
   <strong>Sur Monsieur-Mode-Shop.com, profitez de nombreux déstokages post-soldes sur des milliers d'articles de mode masculine issus des collections printemps / été 2016 ou antérieures et découvrez dès à présent des milliers d'articles issus de la nouvelle collection automne / hiver 2016 !</strong></p>
+  <%= link_to "Je choisis mon look", looks_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %><%= link_to "Voir tous les produits", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %>
   </div>
 </div>
       <!-- <form class="form-horizontal" action="" methode="POST">
