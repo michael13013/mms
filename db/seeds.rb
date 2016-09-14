@@ -1,12 +1,16 @@
 require 'open-uri'
 
-Feed.destroy_all
-Feed.create!(supplier: "Hugo Boss", adapter: "tradedoubler", url: 'https://gist.githubusercontent.com/michael13013/a5d0ff98977285c095b9/raw/ab37bdef70f7eba32a8edf0cce15d939477ee753/tradedoubler.xml')
-Feed.create!(supplier: "Ünkut", adapter: "effiliation", url: 'https://gist.githubusercontent.com/michael13013/8fb8fa84c75d1e95d5f0/raw/cba2026cba3bd414fcdb188d383b804ae1d06240/unkut.xml')
-Feed.create!(supplier: "Carnet de Vol", adapter: "carnetdevol", url: 'https://gist.githubusercontent.com/michael13013/afb2c73b3ca237b34112/raw/211b47a5770b93ef47a5d95574afd09e29b245b8/carnet_de_vol.xml')
-Feed.create!(supplier: "Eden Park", adapter: "edenpark", url: 'https://gist.githubusercontent.com/michael13013/6cdac3427532572c27ce/raw/dd5b156cd991fce50ad4b1004e5170fa95553e9c/edenpark.xml')
-Feed.create!(supplier: "Teddy Smith", adapter: "teddysmith", url: 'https://gist.githubusercontent.com/michael13013/adfe8aa901061d036ad7ab34087151e1/raw/794e434688f2f7042b3d87b100e4c58886340a49/teddysmith')
 
+if ENV["RAILS_ENV"] == 'development'
+  Feed.destroy_all
+  Feed.create!(supplier: "Hugo Boss", adapter: "tradedoubler", url: 'https://gist.githubusercontent.com/michael13013/a5d0ff98977285c095b9/raw/ab37bdef70f7eba32a8edf0cce15d939477ee753/tradedoubler.xml')
+  Feed.create!(supplier: "Ünkut", adapter: "effiliation", url: 'https://gist.githubusercontent.com/michael13013/8fb8fa84c75d1e95d5f0/raw/cba2026cba3bd414fcdb188d383b804ae1d06240/unkut.xml')
+  Feed.create!(supplier: "Carnet de Vol", adapter: "carnetdevol", url: 'https://gist.githubusercontent.com/michael13013/afb2c73b3ca237b34112/raw/211b47a5770b93ef47a5d95574afd09e29b245b8/carnet_de_vol.xml')
+  Feed.create!(supplier: "Eden Park", adapter: "edenpark", url: 'https://gist.githubusercontent.com/michael13013/6cdac3427532572c27ce/raw/dd5b156cd991fce50ad4b1004e5170fa95553e9c/edenpark.xml')
+  Feed.create!(supplier: "Teddy Smith", adapter: "teddysmith", url: 'https://gist.githubusercontent.com/michael13013/adfe8aa901061d036ad7ab34087151e1/raw/794e434688f2f7042b3d87b100e4c58886340a49/teddysmith')
+else
+  puts "Do not feed in production"
+end
 #Feed.create!(supplier: "Teddy Smith", adapter: "teddysmith", url: 'http://feeds.effiliation.com/myformat/13248330')
 
 Product.destroy_all
