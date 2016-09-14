@@ -8,7 +8,6 @@ class ProductsController < ApplicationController
     # params[:looks] = {'20' => '1'} if params[:looks].blank? or \
     # (params[:looks].include? '20' and params[:looks]['20'] == '1')
     session['search_params'] = params
-
     query = params[:query]
     category = params[:category]
     size = params[:size]
@@ -51,8 +50,15 @@ class ProductsController < ApplicationController
 
     @products = products.page(params[:page]).per(30)
     @total = @products.try(:total_count)
-    @categories = Product.where(id: products_from_brand.map(&:id)).select(:category).map(&:category).uniq || []
-    @colors = Product.where(id: products_from_brand.map(&:id)).select(:color).map(&:color).uniq || []
+    #@categories = Product.where(id: products_from_brand.map(&:id)).select(:category).map(&:category).uniq || []
+    # select unique categories in @products
+    @categories = @products.pluck(:category).uniq
+
+    #@colors = Product.where(id: products_from_brand.map(&:id)).select(:color).map(&:color).uniq || []
+    # select unique colors in @products
+    @colors = @products.pluck(:color).uniq
+
+
   end
 
 end

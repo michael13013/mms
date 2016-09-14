@@ -1,3 +1,6 @@
+<% content_for :meta_title, "TODO : définir un look title" %>
+
+
 <h1 class="text-center">Voici les articles de votre look préféré :</h1>
   <h5 class="text-center">Affichage de <%= @products.length %> articles sur <%= @total %> trouvés</h5>
 <div class="container">
@@ -19,8 +22,11 @@
         <% end %>
         <%= hidden_field_tag "query", params[:query] %>
         <hr>
+        <%= link_to products_path, id:"delete-search" do %>
+          <p class="text-danger"><i class="fa fa-times" aria-hidden="true"></i> effacer tout</p>
+        <% end %>
         <h4>Categories</h4>
-        <select name="category" style="width: 100%" class="form-control">
+        <select id="jj" name="category" style="width: 100%" class="form-control">
           <option value=""></option>
           <% @categories.each do |category| %>
             <option value="<%= category %>" <%= 'selected="selected"' if category == params[:category] %>><%= category.capitalize %></option>
@@ -28,7 +34,7 @@
         </select>
         <hr>
         <h4>Couleurs</h4>
-        <select name="color" style="width: 100%" class="form-control">
+        <select id="kk" name="color" style="width: 100%" class="form-control">
           <option value=""></option>
           <% @colors.each do |color| %>
             <option value="<%= color %>" <%= 'selected="selected"' if color == params[:color] %>><%= color.capitalize %></option>
@@ -83,9 +89,11 @@
 
 <% content_for :after_js do %>
     <script>
+    $("#delete-search").hide();
+    $('select').each(function(){if($(this).val()!="") $("#delete-search").show()})
       $('select').on('change', function() {
-        $(this).siblings('select').val('');
-        $(this).parent('form').submit();
-      });
+    //      $(this).siblings('select').val('');
+         $(this).parent('form').submit();
+       });
     </script>
 <% end %>
