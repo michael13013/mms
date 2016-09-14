@@ -38,7 +38,7 @@ class ProductsController < ApplicationController
     products = products_from_brand
 
     products = products.where(category: category) unless category.blank?
-    products = products.where(color: color) unless color.blank?
+    products = products.where('lower(color) = ?', color) unless color.blank?
     unless size.blank?
       product_ids = Offer.search_engine_size(size).map(&:product_id)
       products = products.where(id: product_ids)
@@ -52,13 +52,19 @@ class ProductsController < ApplicationController
     @total = @products.try(:total_count)
     #@categories = Product.where(id: products_from_brand.map(&:id)).select(:category).map(&:category).uniq || []
     # select unique categories in @products
-    @categories = @products.pluck(:category).uniq
+    @categories = clean_values(products, :category)
 
     #@colors = Product.where(id: products_from_brand.map(&:id)).select(:color).map(&:color).uniq || []
     # select unique colors in @products
-    @colors = @products.pluck(:color).uniq
-
+    @colors = clean_values(products, :color)
 
   end
+
+
+  def clean_values(values, field)
+    values = values.pluck(field).map(&:downcase).uniq - [""]
+    values.sort
+  end
+
 
 end

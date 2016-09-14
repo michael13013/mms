@@ -69,6 +69,9 @@ class GenericImporter
   def addProduct(attributes={})
     # on vérifie si le produit existe déjà
     p = Product.find_by_ean(attributes[:ean])
+    # add rewrite rules
+    attributes[:category] = apply_rules(attributes[:category])
+    attributes[:color] = apply_rules(attributes[:color])
     if p.nil?
       createProduct(attributes)
     else
@@ -82,6 +85,9 @@ class GenericImporter
    end
     p.offers.build(supplier: @feed.supplier, price: attributes[:price], link: attributes[:link], size: attributes[:size])
     @updated += 1
+    # update filter fields before saving
+    p.color = attributes[:color]
+    p.category = attributes[:category]
     saveProduct(p)
   end
 
@@ -92,7 +98,7 @@ class GenericImporter
     p.image = attributes[:image]
     p.color = attributes[:color]
     p.title = attributes[:title]
-    p.category = apply_rules(attributes[:category])
+    p.category = attributes[:category]
     p.brand = Brand.where(name: attributes[:brand]).first_or_create(name: attributes[:brand])
     p.offers.build(price: attributes[:price], supplier: @feed.supplier, link: attributes[:link], size: attributes[:size] )
     saveProduct(p)

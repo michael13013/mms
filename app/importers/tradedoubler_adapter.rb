@@ -21,7 +21,7 @@ class TradedoublerAdapter < GenericAdapter
   end
 
   def link(input)
-    data_from_path(input, "advertiserproducturl")
+    data_from_path(input, "productUrl")
   end
 
   def price(input)
