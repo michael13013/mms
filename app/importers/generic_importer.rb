@@ -1,3 +1,5 @@
+require "csv"
+
 class GenericImporter
 
   def initialize(feed)
@@ -7,6 +9,17 @@ class GenericImporter
     @success = 0
     @updated = 0
     @rejected = 0
+    @rules = read_rules
+  end
+
+  def read_rules
+    rules_file = File.join(Rails.root, "app", "importers", "rules.csv")
+
+    rules = {}
+    CSV.foreach(rules_file) do |row|
+      rules[row[0]] = row[1]
+    end
+    return rules
   end
 
   def import
@@ -79,7 +92,7 @@ class GenericImporter
     p.image = attributes[:image]
     p.color = attributes[:color]
     p.title = attributes[:title]
-    p.category = attributes[:category]
+    p.category = apply_rules(attributes[:category])
     p.brand = Brand.where(name: attributes[:brand]).first_or_create(name: attributes[:brand])
     p.offers.build(price: attributes[:price], supplier: @feed.supplier, link: attributes[:link], size: attributes[:size] )
     saveProduct(p)
@@ -92,6 +105,16 @@ class GenericImporter
       @error += 1
       p product.errors.messages
     end
+  end
+
+  def apply_rules(category)
+    @rules.each do |key, value|
+      if category.match(Regexp.new(key,Regexp::IGNORECASE))
+        puts "rewrite '#{category}' to '#{value}'"
+        return value
+      end
+    end
+    return category
   end
 
 end
