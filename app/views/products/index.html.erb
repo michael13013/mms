@@ -22,7 +22,7 @@
         <% end %>
         <%= hidden_field_tag "query", params[:query] %>
         <hr>
-        <%= link_to products_path, id:"delete-search" do %>
+        <%= link_to products_path, id:"delete-search", class: "hide" do %>
           <p class="text-danger"><i class="fa fa-times" aria-hidden="true"></i> effacer tout</p>
         <% end %>
         <h4>Categories</h4>
@@ -89,8 +89,7 @@
 
 <% content_for :after_js do %>
     <script>
-    $("#delete-search").hide();
-    $('select').each(function(){if($(this).val()!="") $("#delete-search").show()})
+    $('select').each(function(){if($(this).val()!="") $("#delete-search").removeClass("hide")})
       $('select').on('change', function() {
     //      $(this).siblings('select').val('');
          $(this).parent('form').submit();
