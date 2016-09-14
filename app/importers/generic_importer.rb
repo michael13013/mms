@@ -14,7 +14,8 @@ class GenericImporter
     importation do
       docs = adapter.open_feed(@feed.url)
       # limit import in production to stay in free plans
-      import_size = ENV["import_limit"].to_i || 10
+      import_size = ENV["import_limit"] ? ENV["import_limit"].to_i : 100
+
       #binding.pry
       docs.take(import_size).each do |product|
         attributes = adapter.parse(product)
