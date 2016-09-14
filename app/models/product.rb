@@ -19,6 +19,10 @@ class Product < ActiveRecord::Base
     self.offers.min_by{ |offer| offer.price }
   end
 
+  def to_param
+    "#{self.id}-#{self.title.parameterize}"
+  end
+
   pg_search_scope :search_engine, against: [ :title, :description, :color, :category ]
 
 
