@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :contacts, only: :create
   root to: 'pages#home'
   resources :looks
-  resources :products
+  resources :products, path: "produits"
 
   get "contact", to: "pages#contact"
   get "qui-sommes-nous", to: "pages#nous"
