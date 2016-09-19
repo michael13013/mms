@@ -61,7 +61,6 @@ class GenericAdapter
       data[:brand] = self.brand(object)
       data[:category] = self.category(object)
       data[:size] = self.size(object)
-
       return data
   end
 

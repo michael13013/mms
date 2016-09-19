@@ -76,7 +76,7 @@ look4 = Look.create!( name: "LUXE", description: "Luxe et Mode Haut de gamme", p
 look5 = Look.create!( name: "NAUTIQUE", description: "Look maritime", photo:"looks/look-0.png")
 look6 = Look.create!( name: "ROCK", description: "Look branché pour rockers urbains", photo:"looks/look-7.png")
 look7 = Look.create!( name: "SPORT", description: "Look sportif", photo: "looks/look-8.jpg")
-look8 = Look.create!( name: "STREETWEAR", description: "Décontracté urbain", photo:"looks/look-1.jpeg")
+look8 = Look.create!( name: "STREETWEAR", description: "Décontracté urbain", photo:"looks/look-1.jpg")
 look9 = Look.create!( name: "SURFWEAR", description: "Look on the beach", photo:"looks/look-4.jpg")
 look10 = Look.create!( name: "TOUS LES LOOKS", description: "Voir tous les produits", photo:"looks/look-all.jpg")
 
