@@ -1,27 +1,36 @@
 pattern,value
-pantalon,pantalon
-chino,pantalon
-bagag,bagages
-boss , boss
-beige clai,beige
-bleu fonc,bleu
-bleu vif,bleu
-bleu marin,bleu
-bleu ro,bleu
-chaussures ,chaussures
-chemises ,chemises
-choco,marron
-ceintures ,ceintures
-Cookies,marron
-Gris chin,gris
-Hugo ,Boss
-marron fonc, marron
-orange clai,orange
-orange fonc,orange
+pantalon,Pantalon
+argent,Gris
+chino,Pantalon
+bagag,Bagages
+béb,Bébé
+boss,Boss
+beige clai,Beige
+bleu fonc,Bleu
+bleu vif,Bleu
+bleu marin,Bleu
+bleu ro,Bleu
+chaussur,Chaussures
+chemis,Chemises
+choco,Marron
+ceintur,Ceintures
+Cookies,Marron
+cravat,Cravates
+Gris chin,Gris
+Gris somb,Gris
+Hugo,Boss
+jaune clai,Jaune
+jaune fonc,Jaune
+marron fonc,Marron
+orange clai,Orange
+orange fonc,Orange
 Polo,Polos
-rouge sombr,rouge
+rose clai,Rose
+rose fonc,Rose
+rouge sombr,Rouge
 T-shirt ,T-shirts
-vert sombr,vert
-Vestes , vestes
-Violet fonc,violet
-Violet clai,violet
+Tee-shirt ,T-shirts
+vert sombr,Vert
+Vestes,Vestes
+Violet fonc,Violet
+Violet clai,Violet
