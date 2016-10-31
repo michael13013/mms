@@ -3,8 +3,8 @@
   <div class="banner-filter">
   </div>
     <div class="banner-content text-center">
-    <h1>Avec la boutique de Monsieur Mode </h1>
-    <p class="tagline"> Trouvez votre look pour homme et les meilleurs articles de mode masculins en 1 clic </p>
+    <h1>Bienvenue sur la boutique de Monsieur Mode !</h1>
+    <p class="tagline">Trouvez les meilleurs articles de mode homme en 1 clic !</p>
     <%= link_to "Je choisis mon look", looks_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %><%= link_to "Voir tous les produits", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %>
     </div>
 </div>
@@ -16,19 +16,19 @@
       <div class="col-xs-12 col-sm-4">
         <div class="feature">
           <%= image_tag "button_ok.png", class: "text-center"%>
-          <div><p>1. Choisissez vos looks préférés parmi une ou plusieurs tenues</p></div>
+          <div><p>1. Choisissez votre look préféré parmi une ou plusieurs tenues,</p></div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-4">
         <div class="feature">
           <%= image_tag "White-Shirt.png", class: "text-center"%>
-          <div><p>2. Découvrez les meilleures tendances adaptées à votre style</p></div>
+          <div><p>2. Profitez des meilleures tendances et des meilleurs prix adaptés à votre style,</p></div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-4">
         <div class="feature">
           <%= image_tag "carte-de-paiement.png", class: "text-center"%>
-          <div><p>3. Achetez en direct sur les boutiques de vos marques préférées</p></div>
+          <div><p>3. Achetez en direct sur les sites de vos marques et distributeurs préférés !</p></div>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
           <div class="feature">
              <%= image_tag "feature1.png"%>
             <p class="text-center">Trouvez vos articles préférés parmi un choix de </p>
-            <h2 class="text-center"> <strong> <%= Product.count %> </strong> références de mode homme<br>(vêtements, chaussures & accessoires).</h2><p><%= link_to "Voir tous les produits", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
+            <h2 class="text-center"> <strong> <%= Product.count %> </strong> références de mode homme<br>(vêtements, chaussures & accessoires).</h2><p>
           </div>
 
         </div>
@@ -59,9 +59,8 @@
           <div class="feature">
             <%= image_tag "partner-feature.png" %>
             <p class="text-center">Nous vous proposons actuellement le<br></p>
-            <h2 class="text-center"> <strong> catalogue de <%= Feed.count %></strong> marques et distributeurs<br> sélectionnés pour leur choix et leur sérieux.</h2><p><%= link_to "Devenir partenaire", partenaires_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
+            <h2 class="text-center"> <strong> catalogue de <%= Feed.count %></strong> marques et distributeurs<br> sélectionnés pour leur choix et leur sérieux.</h2><p>
           </div>
-
         </div>
       </div>
     </div>
@@ -82,14 +81,15 @@
       <%= image_tag "costume-homme.jpg"%>
       <div class="carousel-caption">
         <h2>Découvrez notre sélection des plus beaux costumes homme !</h2>
-        <p><%= link_to "Voir tous les costumes", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
+        <div><p><%= link_to "Voir tous les costumes", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
+        </div>
       </div>
     </div>
     <div class="item">
     <%= image_tag "polo.png"%>
       <div class="carousel-caption">
         <h2>Découvrez notre sélection de polos homme !</h2>
-        <p><%= link_to "Voir tous les polos", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p>
+        <div><p><%= link_to "Voir tous les polos", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %></p></div>
       </div>
     </div>
   </div>
@@ -121,7 +121,7 @@
           <%= image_tag "michael-turcan.jpg", class: "avatar-bordered-large"%>
           <em>Michaël de Marseille</em>
         </div>
-        <p>" Top !! Je peux faire des recherches par look mais je peux aussi voir tous les produits disponibles sur la boutique et faire moi même mes tris pour trouver l'article idéal ! C'est vraiment super pratique ! "</p>
+        <p>" Top !! Je peux faire des recherches par look mais je peux aussi voir tous les produits disponibles sur la boutique et faire moi même mes propres tris pour trouver l'article idéal !<br>C'est vraiment super pratique ! "</p>
       </div>
       <div class="col-xs-12 col-sm-4">
         <div class="record">
@@ -132,7 +132,7 @@
       </div>
     </div>
       <div class="container text-center">
-        <%= link_to "Je détermine mon look", looks_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %>
+        <%= link_to "Moi aussi, je veux donner mon avis !", contact_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %>
       </div>
   </div>
 </div>
@@ -188,10 +188,9 @@
 <div class="wrapper-temoignage padded bg-grey text-center">
   <div class="container">
   <p>Monsieur-Mode-Shop.com : Votre boutique 100% Mode Homme en ligne !!<br>
-  Monsieur-Mode-Shop.com déniche pour vous, le meilleur des tendances de la mode pour homme.<br>
+  Monsieur Mode déniche pour vous, le meilleur des tendances de la mode pour homme.<br>
   Notre expertise unique répond à toutes vos attentes à travers une large sélection : Prêt-à-porter, Chaussures et Accessoires parmi des milliers de références !<br>
-  <strong>Sur Monsieur-Mode-Shop.com, profitez de nombreux déstokages sur des milliers d'articles de mode masculine issus des collections printemps / été 2016 ou antérieures et découvrez dès à présent des milliers d'articles issus de la nouvelle collection automne / hiver 2016 !</strong></p>
-  <%= link_to "Je choisis mon look", looks_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %><%= link_to "Voir tous les produits", products_path, class: "btn navbar-wagon-button cta btn-lg margin-sm" %>
+  <strong>Profitez dès maintenant des dernières collections et de nombreux déstockages de mode masculine !</strong></p>
   </div>
 </div>
       <!-- <form class="form-horizontal" action="" methode="POST">
