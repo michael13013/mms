@@ -6,5 +6,4 @@ namespace :feed do
       importer.import
     end
   end
-
 end
