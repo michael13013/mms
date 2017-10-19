@@ -2,7 +2,7 @@ require "nokogiri"
 require "open-uri"
 
 
-class unclejeansAdapter < GenericAdapter
+class UnclejeansAdapter < GenericAdapter
 
   def open_feed(url)
     data = Nokogiri::XML(open(url))
