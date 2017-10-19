@@ -7,6 +7,7 @@ if ENV["RAILS_ENV"] == 'development'
   Feed.create!(supplier: "Carnet de Vol", adapter: "carnetdevol", url: 'https://gist.githubusercontent.com/michael13013/afb2c73b3ca237b34112/raw/211b47a5770b93ef47a5d95574afd09e29b245b8/carnet_de_vol.xml')
   Feed.create!(supplier: "Eden Park", adapter: "edenpark", url: 'https://gist.githubusercontent.com/michael13013/6cdac3427532572c27ce/raw/dd5b156cd991fce50ad4b1004e5170fa95553e9c/edenpark.xml')
   Feed.create!(supplier: "Teddy Smith", adapter: "teddysmith", url: 'https://gist.githubusercontent.com/michael13013/adfe8aa901061d036ad7ab34087151e1/raw/794e434688f2f7042b3d87b100e4c58886340a49/teddysmith')
+  Feed.create!(supplier: "Uncle Jeans", adapter: "unclejeans", url: 'http://feeds.effiliation.com/myformat/13248330')
 else
   puts "Do not feed in production"
 end
